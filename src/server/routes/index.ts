@@ -12,9 +12,9 @@ router.get('/test', (req, res) => {
 });
 
 
-router.post('/cars', (req, res) => {
-    console.log(req.body);
-    res.send("Cars");
+router.get('/cars/:id', (req, res) => {
+    console.log(req.params);
+    res.status(400).json("Cars");
 });
 
 

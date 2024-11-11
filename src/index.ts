@@ -3,6 +3,6 @@ import 'dotenv/config';
 
 const port = process.env.PORT;
 
-server.listen(port, () => {
+server.listen(port || 3000, () => {
     console.log("Listening on port " + port);
-});
+})
