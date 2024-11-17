@@ -17,9 +17,9 @@ A simple API to register a city and people beloging to a city, and all its funct
 | - | - | - | - |
 | `/cities`| `GET`| | Search a list of cities, with pagination and filter by name. |
 | `/cities`| `POST`| | Create a new city. |
-| `/cities/:id` | `GET` | Get a city by ID. |
-| `/cities/:id` | `PUT` | Update a city by ID. |
-| `/cities/:id` | `DELETE` | Delete a city by ID. |
+| `/cities/:id` | `{ "id": "cityID" }` | `GET` | Get a city by ID. |
+| `/cities/:id` | `{ "id": "cityID" }` | `PUT` | Update a city by ID. |
+| `/cities/:id` | `{ "id": "cityID" }` | `DELETE` | Delete a city by ID. |
 
 ### Users (private)
 
@@ -27,9 +27,9 @@ A simple API to register a city and people beloging to a city, and all its funct
 | - | - | - | - |
 | `/users`| `GET`| | Search a list of users, with pagination and filter by name. |
 | `/user`| `POST`| | Create a new user. |
-| `/user/:id` | `GET` | Get a user by ID. |
-| `/user/:id` | `PUT` | Update a user by ID. |
-| `/user/:id` | `DELETE` | Delete a user by ID. |
+| `/user/:id` | `{ "id": "userID" }` | `GET` | Get a user by ID. |
+| `/user/:id` | `{ "id": "userID" }` | `PUT` | Update a user by ID. |
+| `/user/:id` | `{ "id": "userID" }` | `DELETE` | Delete a user by ID. |
 
 ### Login (public)
 
