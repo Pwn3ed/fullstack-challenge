@@ -17,7 +17,7 @@ A simple API to register a city and people beloging to a city, and all its funct
 | - | - | - | - |
 | `/cities`| `GET`| | Search a list of cities, with pagination and filter by name. |
 | `/cities`| `POST`| | Create a new city. |
-| `/cities/:id` | `GET` | `{ "id": "cityID" }` Get a city by ID. |
+| `/cities/:id` | `GET` | `{ "id": "cityID" }` | Get a city by ID. |
 | `/cities/:id` | `PUT` | `{ "id": "cityID" }` | Update a city by ID. |
 | `/cities/:id` | `DELETE` | `{ "id": "cityID" }` | Delete a city by ID. |
 
