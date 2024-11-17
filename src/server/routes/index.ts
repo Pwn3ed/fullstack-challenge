@@ -13,7 +13,8 @@ router.get('/test', (req, res) => {
 
 
 router.get('/cars/:id', (req, res) => {
-    console.log(req.params);
+    const id = req.params.id;
+    console.log(id);
     res.status(400).json("Cars");
 });
 
