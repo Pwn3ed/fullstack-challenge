@@ -1,23 +1,13 @@
-import { Router } from "express";
-
-const router = Router();
+import { Router, Request, Response } from "express";
 
 
-router.get('/', (req, res) => {
-    res.send("Starting page");
-});
+export const router = Router();
 
-router.get('/test', (req, res) => {
-    res.send("Hey!");
+
+router.get('/', (req: Request, res: Response) => {
+    res.send("Start Page!");
 });
 
 
-router.get('/cars/:id', (req, res) => {
-    const id = req.params.id;
-    console.log(id);
-    res.status(400).json("Cars");
-});
-
-
-
-export default router;
+export { router as citiesRouter } from "./cities.routes";
+export { router as usersRoutes } from "./users.routes";
