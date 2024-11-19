@@ -5,7 +5,7 @@ export const router = Router();
 
 
 router.get('/cities', (req: Request, res: Response) => {
-    
+    res.json("Cities");
 });
 
 router.post('/city', (req: Request, res: Response) => {
