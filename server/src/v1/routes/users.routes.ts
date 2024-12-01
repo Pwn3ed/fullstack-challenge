@@ -10,7 +10,6 @@ router.get('/users', (req: Request, res:Response) => {
 
 router.post('/user', createUser);
 
-
 router.get('/user/:id', (req: Request, res: Response) => {
     const { id } = req.params;
     res.status(200).json("User: "+id);
