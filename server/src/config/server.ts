@@ -1,17 +1,19 @@
 import express from 'express';
-import { router, usersRoutes, citiesRouter } from '../v1/routes';
+import { router, userRoutes, cityRoutes, personRoutes } from '../v1/routes';
+import cors from 'cors';
 
 const server = express();
 
-
+//middlewares
+server.use(cors());
 server.use(express.json());
 
 
+//routes
 server.use(router);
-
-server.use(usersRoutes);
-
-server.use(citiesRouter);
+server.use(userRoutes);
+server.use(cityRoutes);
+server.use(personRoutes)
 
 
 export { server };

@@ -2,9 +2,9 @@ import { Request, Response } from "express";
 import db from "../../config/database";
 
 
-export const getAllUsers = async (req: Request, res:Response) => {
+export const getAllPersons = async (req: Request, res:Response) => {
     const query = `
-        SELECT * FROM user;
+        SELECT * FROM person;
     `;
 
     try {
@@ -19,16 +19,16 @@ export const getAllUsers = async (req: Request, res:Response) => {
 
 }
 
-export const CreateUser = async (req: Request, res: Response) => {
-    
+export const CreatePerson = async (req: Request, res: Response) => {
+
     const values = [
         req.body.name,
-        req.body.password,
-        req.body.email
+        req.body.email,
+        req.body.cityid
     ];
     
     const query = `
-        INSERT INTO user (name, password, email) VALUES (?, ?, ?)
+        INSERT INTO person (name, email, cityid) VALUES (?, ?, ?)
     `;
 
     try {
@@ -41,33 +41,33 @@ export const CreateUser = async (req: Request, res: Response) => {
 
 }
 
-export const getUserById = async (req:Request, res:Response) => {
+export const getPersonById = async (req:Request, res:Response) => {
 
     const values = [
         req.params.id
     ]
 
     try {
-        const [results, fields] = await (await db).query('SELECT * from user WHERE id = ?', values);
+        const [results, fields] = await (await db).query('SELECT * from person WHERE id = ?', values);
         res.status(200).send(results);
     } catch {
         res.status(400).send('Error');
     }
 }
 
-export const updateUserById = async (req: Request, res: Response) => {
+export const updatePersonById = async (req: Request, res: Response) => {
 
     const values = [
         req.body.name,
-        req.body.password,
         req.body.email,
+        req.body.cityid,
         req.params.id
     ];
 
     try {
         const [results, fields] = await (await db).query(`
-                update user
-                set name = ?, password = ?, email = ?
+                update person
+                set name = ?, email = ?, cityid = ?
                 where id = ?
             `, values);
         res.status(200).send(results);
@@ -77,7 +77,7 @@ export const updateUserById = async (req: Request, res: Response) => {
 
 }
 
-export const deleteUserById = async (req: Request, res: Response) => {
+export const deletePersonById = async (req: Request, res: Response) => {
 
     const values = [
         req.params.id
@@ -85,7 +85,7 @@ export const deleteUserById = async (req: Request, res: Response) => {
 
     try {
         const [results, fields] = await (await db).query(`
-                delete from user
+                delete from person
                 where id = ?
             `, values);
         res.status(200).send(results);

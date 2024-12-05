@@ -1,20 +1,13 @@
 import 'dotenv/config';
-import mysql, { Pool } from 'mysql2';
+import mysql from 'mysql2/promise';
 
-let pool: Pool | null = null;
 
-try {
+const db =  mysql.createConnection({
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DB
+});
 
-    pool = mysql.createPool({
-        host: process.env.MYSQL_HOST,
-        user: process.env.MYSQL_USER,
-        password: process.env.MYSQL_PASSWORD,
-        database: process.env.MYSQL_DB
-    });
 
-    
-} catch (err) {
-    console.log(err);
-}
-
-export default pool;
+export default db;

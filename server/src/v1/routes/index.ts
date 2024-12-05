@@ -9,5 +9,6 @@ router.get('/', (req: Request, res: Response) => {
 });
 
 
-export { router as citiesRouter } from "./cities.routes";
-export { router as usersRoutes } from "./users.routes";
+export { router as cityRoutes } from "./city.routes";
+export { router as userRoutes } from "./user.routes";
+export { router as personRoutes } from "./person.routes";
