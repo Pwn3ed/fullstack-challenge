@@ -22,3 +22,54 @@ body {
   display: flex;
   justify-content: right;
 }
+
+.City {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgb(83, 82, 81);
+}
+
+.City label {
+  margin: 10px;
+}
+
+.City button {
+  font-size: 10px;
+  background-color: rgb(139, 27, 27);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.City .button {
+
+}
+
+.addNewCity {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  /* background-color: pink; */
+}
+
+.addNewCity button {
+  background-color: rgb(28, 150, 58);
+}
+
+.Cities {
+  border: 2px solid rgb(88, 87, 87);
+  border-radius: 10px;
+}
+
+.Cities h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.Link {
+  color: rgb(245, 245, 245);
+  background-color: rgb(28, 150, 58);
+}

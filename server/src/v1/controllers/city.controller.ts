@@ -64,7 +64,7 @@ export const updateCityById = async (req: Request, res: Response) => {
     try {
         const [results, fields] = await (await db).query(`
                 update city
-                set name = ?,
+                set name = ?
                 where id = ?
             `, values);
         res.status(200).send(results);
