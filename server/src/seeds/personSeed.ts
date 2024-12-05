@@ -3,8 +3,7 @@ import db from '../config/database';
 
 export const personSeeds = () => {
     createPersonTable();
-    inserPerson1();
-    insertPerson2();
+    insertPersons();
 }
 
 const createPersonTable = async () => {
@@ -20,33 +19,14 @@ const createPersonTable = async () => {
     (await db).query(query);
 }
 
-const inserPerson1 = async () => {
+const insertPersons = async () => {
 
     const query = `
         INSERT INTO person (email, name, cityid)
         VALUES 
-        (
-            'diego@hotmail.com',
-            'Diego Michel Prestes',
-            1
-        )
+        ('diego@hotmail.com','Diego Michel Prestes', 1),
+        ('leonardo@hotmail.com', 'Leonardo Luz Fachel', 2)
     `;
     
     (await db).query(query);
 }
-
-const insertPerson2 = async () => {
-
-    const query = `
-        INSERT INTO person (email, name, cityid)
-        VALUES 
-        (
-            'leonardo@hotmail.com',
-            'Leonardo Luz',
-            2
-        )
-    `;
-    
-    (await db).query(query);
-}
-

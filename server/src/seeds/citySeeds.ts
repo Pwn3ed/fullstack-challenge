@@ -2,8 +2,7 @@ import db from '../config/database';
 
 export const citySeeds = () => {
     createCityTable();
-    insertCity1();
-    insertCity2();
+    insertCities();
 }
 
 const createCityTable = async () => {
@@ -17,26 +16,32 @@ const createCityTable = async () => {
     (await db).query(query);
 }
 
-const insertCity1 = async () => {
+const insertCities = async () => {
     const query = `
         INSERT INTO city (name)
         VALUES 
-        (
-            'Xangri-la'
-        )
+        ('Porto Alegre'),
+        ('Caxias do Sul'),
+        ('Pelotas'),
+        ('Canoas'),
+        ('Santa Maria'),
+        ('Gravataí'),
+        ('Viamão'),
+        ('Novo Hamburgo'),
+        ('São Leopoldo'),
+        ('Rio Grande'),
+        ('Alvorada'),
+        ('Passo Fundo'),
+        ('Sapucaia do Sul'),
+        ('Uruguaiana'),
+        ('Bagé'),
+        ('Bento Gonçalves'),
+        ('Erechim'),
+        ('Guaíba'),
+        ('Santa Cruz do Sul'),
+        ('Santana do Livramento')
     `;
     
     (await db).query(query);
 }
 
-const insertCity2 = async () => {
-    const query = `
-        INSERT INTO city (name)
-        VALUES 
-        (
-            'Osorio'
-        )
-    `;
-    
-    (await db).query(query);
-}

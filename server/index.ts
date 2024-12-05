@@ -11,7 +11,10 @@ server.listen(port || 3000, () => {
     console.log("Listening on port " + port);
 })
 
-// dropAll();
-// citySeeds();
-// personSeeds();
-// userSeeds();
+
+
+// DEBUG:
+    // dropAll();
+    // citySeeds();
+    // personSeeds();
+    // userSeeds();
