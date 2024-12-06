@@ -24,7 +24,7 @@ const insertPersons = async () => {
     const query = `
         INSERT INTO person (email, name, cityid)
         VALUES 
-        ('diego@hotmail.com','Diego Michel Prestes', 1),
+        ('diego@hotmail.com','Diego Michel Prestes', 21),
         ('test@hotmail.com', 'testUser', 2)
     `;
     

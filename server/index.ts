@@ -13,6 +13,10 @@ server.listen(port || 3000, () => {
 
 
 // DEBUG:
-    // citySeeds();
+
+// IF FIRST TIME RUNNING:
+    // citySeeds(); 
     // personSeeds();
-    // userSeeds();
+
+// TO CLEAR DATABASE:
+    // dropAll(); 

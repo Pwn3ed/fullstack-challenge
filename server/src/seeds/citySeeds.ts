@@ -39,7 +39,8 @@ const insertCities = async () => {
         ('Erechim'),
         ('Guaíba'),
         ('Santa Cruz do Sul'),
-        ('Santana do Livramento')
+        ('Santana do Livramento'),
+        ('Xangri-lá')
     `;
     
     (await db).query(query);
