@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { CreatePerson, deletePersonById, getAllPersons, getPersonById, updatePersonById } from '../controllers/person.controller';
+import { CreatePerson, deletePersonById, getAllPersons, getAllPersonsCount, getPersonById, updatePersonById } from '../controllers/person.controller';
 
 export const router = Router();
 
@@ -13,3 +13,5 @@ router.get('/person/:id', getPersonById);
 router.put('/person/:id', updatePersonById);
 
 router.delete('/person/:id', deletePersonById);
+
+router.get('/persons/count', getAllPersonsCount);

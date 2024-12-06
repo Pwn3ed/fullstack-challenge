@@ -6,8 +6,10 @@ import Home from './components/Home'
 import Users from './components/User/Users'
 import Cities from './components/City/Cities'
 import Persons from './components/Person/Persons'
-import CityForm from './components/City/CityForm'
+import UpdateCity from './components/City/UpdateCity'
 import AddNewCity from './components/City/AddNewCity'
+import AddNewPerson from './components/Person/AddNewPerson'
+import UpdatePerson from './components/Person/UpdatePerson'
 
 function App() {
 
@@ -18,11 +20,18 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         { index: true, element: <Home /> },
+
         { path:'/cities', element: <Cities /> },
         { path:'/city/add', element: <AddNewCity /> },
-        { path: '/city/:id', element: <CityForm /> },
-        { path: 'persons', element: <Persons /> },
+        { path: '/city/:id', element: <UpdateCity /> },
+
+        { path: '/persons', element: <Persons /> },
+        { path: '/person/add', element: <AddNewPerson /> },
+        { path: '/person/:id', element: <UpdatePerson /> },
+
         { path:'/users', element: <Users /> }
+        
+
       ]
     }
   ])

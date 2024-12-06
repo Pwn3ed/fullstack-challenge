@@ -1,19 +1,25 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const AddNewCity = () => {
+    const navigate = useNavigate();
 
     const [name, setName] = useState('');
 
     const addNewCityHandler = async () => {
-        const data = axios.post(`http://localhost:3333/city/add`, name);
-        console.log(data)
+        const data = await axios.post(`http://localhost:3333/city`, {
+            name: name
+        });
+        if (data)
+            alert('New city added succesfully!');
+        navigate('/cities')
     }
 
     return (
-        <div className="RegisterCity">
-            <h1>Register new city</h1>
+        <div>
+            <h1>Add new city</h1>
 
             <label>
                 Name:

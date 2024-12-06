@@ -94,3 +94,20 @@ export const deletePersonById = async (req: Request, res: Response) => {
     }
 
 }
+
+export const getAllPersonsCount = async (req: Request, res:Response) => {
+    const query = `
+        SELECT count(id) as count FROM person;
+    `;
+
+    try {
+        const [results, fields] = await (await db).query(query);
+        
+        res.send(results);
+
+    } catch (error) {
+        console.log(error)
+    }
+
+
+}

@@ -91,3 +91,20 @@ export const deleteCityById = async (req: Request, res: Response) => {
     }
 
 }
+
+export const getAllCitiesCount = async (req: Request, res:Response) => {
+    const query = `
+        SELECT count(id) as count FROM city;
+    `;
+
+    try {
+        const [results, fields] = await (await db).query(query);
+        
+        res.send(results);
+
+    } catch (error) {
+        console.log(error)
+    }
+
+
+}

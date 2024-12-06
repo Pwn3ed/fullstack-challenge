@@ -10,9 +10,8 @@ const Cities = () => {
 
 
     const useAPI = async () => {
-        const url = 'http://localhost:3333/cities';
-        const data = await axios.get(url);
-        // console.log(data.data[0].name)
+        const data = await axios.get('http://localhost:3333/cities');
+
         setCities(data.data)
     }
 
@@ -23,13 +22,13 @@ const Cities = () => {
     }, []);
 
     return (
-        <div className="Cities">
+        <div className="Items">
 
 
             <h1>Cities list</h1>
 
-            <div className="addNewCity">
-                <button><Link className="Link" to={'/city/add'}>Add new city</Link></button>            
+            <div className="addNewItem">
+                <button><Link className="LinkNew" to={'/city/add'}>Add new city</Link></button>            
             </div>
 
             <div>

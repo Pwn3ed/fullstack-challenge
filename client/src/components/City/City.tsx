@@ -20,16 +20,12 @@ const City = ({ city }: CityProps) => {
         }
     }
 
-    const updateButtonHandler = () => {
-        Link
-    }
-
     return (
-        <div className="City">
+        <div className="Item">
             <label>{ city.name }</label>
             <div className="buttons">
+                <button className="ButtonUpdate"> <Link className="LinkUpdate" to={`/city/${city.id}`}>Update</Link> </button>
                 <button onClick={ () => removeButtonHandler() }>Remove</button>
-                <button onClick={ () => updateButtonHandler() }> <Link to={`/city/${city.id}`}>Update</Link> </button>
             </div>
         </div>
     )

@@ -20,23 +20,23 @@ body {
 
 .Footer {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
-.City {
+.Item {
   display: flex;
   justify-content: space-between;
   border: 2px solid black;
   border-radius: 10px;
   margin: 10px;
-  background-color: rgb(83, 82, 81);
+  background-color: rgb(58, 58, 58);
 }
 
-.City label {
+.Item label {
   margin: 10px;
 }
 
-.City button {
+.Item button {
   font-size: 10px;
   background-color: rgb(139, 27, 27);
   margin-top: 10px;
@@ -44,32 +44,55 @@ body {
   margin-right: 5px;
 }
 
-.City .button {
+.Item .button {
 
 }
 
-.addNewCity {
+.addNewItem {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
   /* background-color: pink; */
 }
 
-.addNewCity button {
+.addNewItem button {
   background-color: rgb(28, 150, 58);
 }
 
-.Cities {
+.Items {
   border: 2px solid rgb(88, 87, 87);
   border-radius: 10px;
 }
 
-.Cities h1 {
+.Items h1 {
   display: flex;
   justify-content: center;
 }
 
-.Link {
+.LinkNew {
   color: rgb(245, 245, 245);
-  background-color: rgb(28, 150, 58);
+}
+
+.LinkUpdate {
+  color: rgb(245, 245, 245);
+}
+
+.buttons .ButtonUpdate {
+  background-color: rgb(49, 100, 158);
+}
+
+.PersonForm {
+  display: flex;
+  flex-direction: column;
+  /* background-color: pink; */
+}
+
+.Home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Count {
+  text-align: center;
+  margin-bottom: 30px;
 }
