@@ -5,7 +5,7 @@ import ErrorPage from './components/ErrorPage'
 import Home from './components/Home'
 import Users from './components/User/Users'
 import Cities from './components/City/Cities'
-import Persons from './components/Person/Persons'
+import People from './components/Person/People'
 import UpdateCity from './components/City/UpdateCity'
 import AddNewCity from './components/City/AddNewCity'
 import AddNewPerson from './components/Person/AddNewPerson'
@@ -25,7 +25,7 @@ function App() {
         { path:'/city/add', element: <AddNewCity /> },
         { path: '/city/:id', element: <UpdateCity /> },
 
-        { path: '/persons', element: <Persons /> },
+        { path: '/people', element: <People /> },
         { path: '/person/add', element: <AddNewPerson /> },
         { path: '/person/:id', element: <UpdatePerson /> },
 

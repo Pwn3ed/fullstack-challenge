@@ -1,10 +1,10 @@
 import { Router } from 'express'
-import { CreatePerson, deletePersonById, getAllPersons, getAllPersonsCount, getPersonById, updatePersonById } from '../controllers/person.controller';
+import { CreatePerson, deletePersonById, getAllPeople, getAllPeopleCount, getPersonById, updatePersonById } from '../controllers/person.controller';
 
 export const router = Router();
 
 
-router.get('/persons', getAllPersons);
+router.get('/people', getAllPeople);
 
 router.post('/person', CreatePerson);
 
@@ -14,4 +14,4 @@ router.put('/person/:id', updatePersonById);
 
 router.delete('/person/:id', deletePersonById);
 
-router.get('/persons/count', getAllPersonsCount);
+router.get('/people/count', getAllPeopleCount);

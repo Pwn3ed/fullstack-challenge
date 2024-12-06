@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import db from "../../config/database";
 
 
-export const getAllPersons = async (req: Request, res:Response) => {
+export const getAllPeople = async (req: Request, res:Response) => {
     const query = `
         SELECT * FROM person;
     `;
@@ -95,7 +95,7 @@ export const deletePersonById = async (req: Request, res: Response) => {
 
 }
 
-export const getAllPersonsCount = async (req: Request, res:Response) => {
+export const getAllPeopleCount = async (req: Request, res:Response) => {
     const query = `
         SELECT count(id) as count FROM person;
     `;

@@ -13,7 +13,7 @@ const Home = () => {
     }
 
     const countAllPerson = async () => {
-        const personCount = await axios.get('http://localhost:3333/persons/count');
+        const personCount = await axios.get('http://localhost:3333/people/count');
         // console.log(citiesCount.data[0]);
         setCountPerson(personCount.data[0].count)
     }
@@ -29,7 +29,7 @@ const Home = () => {
             <h3>Grouping people from own city.</h3>
             <div className="Home">
                 <div className="Count">
-                    <h3>Total Persons</h3>
+                    <h3>Total People</h3>
                     <label>{countPerson}</label>
                 </div>
                 <div className="Count">

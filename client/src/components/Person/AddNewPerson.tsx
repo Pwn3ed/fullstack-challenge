@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import City from "../City/City";
-import { Router, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const AddNewPerson = () => {
@@ -21,7 +21,7 @@ const AddNewPerson = () => {
         });
         if (data)
             alert('New person added succesfully!');
-        navigate('/persons')
+        navigate('/people')
     }
 
     const getAllCities = async () => {

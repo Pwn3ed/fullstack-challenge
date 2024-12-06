@@ -4,13 +4,13 @@ import Person from "./Person";
 import { Link } from "react-router-dom";
 
 
-const Persons = () => {
+const People = () => {
 
-    const [persons, setPersons] = useState<Person[]>([]);
+    const [people, setPersons] = useState<Person[]>([]);
 
 
     const useAPI = async () => {
-        const url = 'http://localhost:3333/persons';
+        const url = 'http://localhost:3333/people';
         const data = await axios.get(url);
 
         setPersons(data.data)
@@ -26,7 +26,7 @@ const Persons = () => {
         <div className="Items">
 
 
-            <h1>Persons list</h1>
+            <h1>People list</h1>
 
             <div className="addNewItem">
                 <button><Link className="LinkNew" to={'/person/add'}>Add new person</Link></button>            
@@ -34,7 +34,7 @@ const Persons = () => {
 
             <div>
                 {
-                    persons.map( person => {
+                    people.map( person => {
                         return <Person key={person.id} person={person} />
                     } )
                 }
@@ -44,4 +44,4 @@ const Persons = () => {
     )
 };
 
-export default Persons;
+export default People;
