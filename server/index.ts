@@ -1,6 +1,5 @@
 import { server } from './src/config/server';
 import 'dotenv/config';
-import { userSeeds } from './src/seeds/userSeeds'
 import { citySeeds } from './src/seeds/citySeeds';
 import { dropAll } from './src/seeds/dropAll';
 import { personSeeds } from './src/seeds/personSeed';
@@ -14,7 +13,6 @@ server.listen(port || 3000, () => {
 
 
 // DEBUG:
-    // dropAll();
     // citySeeds();
     // personSeeds();
     // userSeeds();

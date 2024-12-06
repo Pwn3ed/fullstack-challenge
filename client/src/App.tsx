@@ -3,7 +3,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/Layout'
 import ErrorPage from './components/ErrorPage'
 import Home from './components/Home'
-import Users from './components/User/Users'
 import Cities from './components/City/Cities'
 import People from './components/Person/People'
 import UpdateCity from './components/City/UpdateCity'
@@ -28,10 +27,6 @@ function App() {
         { path: '/people', element: <People /> },
         { path: '/person/add', element: <AddNewPerson /> },
         { path: '/person/:id', element: <UpdatePerson /> },
-
-        { path:'/users', element: <Users /> }
-        
-
       ]
     }
   ])

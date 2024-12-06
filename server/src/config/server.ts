@@ -1,5 +1,5 @@
 import express from 'express';
-import { router, userRoutes, cityRoutes, personRoutes } from '../v1/routes';
+import { router, cityRoutes, personRoutes } from '../v1/routes';
 import cors from 'cors';
 
 const server = express();
@@ -11,7 +11,6 @@ server.use(express.json());
 
 //routes
 server.use(router);
-server.use(userRoutes);
 server.use(cityRoutes);
 server.use(personRoutes)
 
