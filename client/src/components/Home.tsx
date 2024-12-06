@@ -30,11 +30,15 @@ const Home = () => {
             <div className="Home">
                 <div className="Count">
                     <h3>Total People</h3>
-                    <label>{countPerson}</label>
+                    <div className="CountNumber">
+                        <label>{countPerson}</label>
+                    </div>
                 </div>
                 <div className="Count">
                     <h3>Total Cities</h3>
-                    <label>{countCity}</label>
+                    <div className="CountNumber">
+                        <label>{countCity}</label>
+                    </div>
                 </div>
                 
             </div>
