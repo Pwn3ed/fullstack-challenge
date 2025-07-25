@@ -2,7 +2,7 @@
 
 ## :bulb: About
 
-A simple API to register a city and people beloging to a city, and all its functions.
+An API to register a city and people beloging to a city, and all its functions.
 
 ## :wrench: Setup
 
