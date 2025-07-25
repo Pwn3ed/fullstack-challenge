@@ -11,7 +11,7 @@ An API to register a city and people beloging to a city, and all its functions.
 
 ## Endpoints
 
-### Cities (private)
+### City (private)
 
 | URL | METHOD | HEADERS | DESCRIPTION |
 | - | - | - | - |
@@ -21,15 +21,15 @@ An API to register a city and people beloging to a city, and all its functions.
 | `/city/:id` | `PUT` | `{ "id": "cityID" }` | Update a city by ID. |
 | `/city/:id` | `DELETE` | `{ "id": "cityID" }` | Delete a city by ID. |
 
-### Users (private)
+### Person (private)
 
 | URL | METHOD | HEADERS | DESCRIPTION |
 | - | - | - | - |
-| `/users`| `GET`| | Search a list of users, with pagination and filter by name. |
-| `/user`| `POST`| | Create a new user. |
-| `/user/:id` | `GET` | `{ "id": "userID" }` | Get a user by ID. |
-| `/user/:id` | `PUT` | `{ "id": "userID" }` | Update a user by ID. |
-| `/user/:id` | `DELETE` | `{ "id": "userID" }` | Delete a user by ID. |
+| `/people`| `GET`| | Search a list of people, with pagination and filter by name. |
+| `/person`| `POST`| | Create a new person. |
+| `/person/:id` | `GET` | `{ "id": "personID" }` | Get a person by ID. |
+| `/person/:id` | `PUT` | `{ "id": "personID" }` | Update a person by ID. |
+| `/person/:id` | `DELETE` | `{ "id": "personID" }` | Delete a person by ID. |
 
 ### Login (public)
 
